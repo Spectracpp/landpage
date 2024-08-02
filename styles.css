@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Styles */
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+header {
+    background-color: #06820a; /* Bright Orange */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    position: relative; /* Ensure it stays on top */
+    z-index: 2; /* Keep header above hero */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow separation */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content horizontally */
+    justify-content: space-between; /* Spread out logo and nav */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px; /* Height for the logo */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Adding a responsive layout adjustment */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: 10px; /* Add space between logo and nav */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Space between nav items */
+    }
+}
+
+
+.login-button {
+    background-color: #ffffff;
+    color: black; /* Text color */
+    padding: 8px 16px; /* Padding */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login-button:hover {
+    background-color: #f0f0f0;
+    color: #4CAF50; /* Matching Green */
+    transform: translateY(-50%) translateX(10px); /* Slide effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.hero {
+    background-color: #4CAF50; /* Matching Green */
+    color: black;
+    text-align: center;
+    padding: 80px 20px; /* Adjust padding for better spacing */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Ensure the curved effect stays within bounds */
+    border-bottom: 10px solid #e0e0e0; /* Modern contrast shadow */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sub-quote {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.curvy-button {
+    background-color: #FFFFFF; /* White */
+    color: black; /* Text color */
+    padding: 12px 24px; /* Size of the buttons */
+    border-radius: 25px; /* Curvy effect */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.curvy-button:hover {
+    background-color: #F5F5F5; /* Light Gray */
+    color: #4CAF50; /* Matching Green */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Add space for images throughout the hero section */
+.hero-images {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Space out images */
+    z-index: 1;
+}
+
+.hero-image {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for images */
+}
+
+.info-section {
+    background-color: #ffffff; /* White background */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 0; /* Remove top border */
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto; /* Center container */
+}
+
+.info-card {
+    background-color: #e0f2f1; /* Light green shade */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px; /* Fixed width for each card */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.info-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    background-color: #4CAF50; /* Matching green */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.card-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #ffffff; /* White background */
+    padding: 80px 20px; /* Padding for spacing */
+    position: relative;
+    margin-top: 0; /* Ensure no extra margin on top */
+}
+
+/* Container for text and partitions */
+.how-it-works-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Center container horizontally */
+    text-align: left; /* Align text to the left */
+}
+
+/* Title and subtitle styling */
+.how-it-works h2, .how-it-works h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.how-it-works h2 {
+    font-size: 1.2rem; /* Smaller text */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.how-it-works h3 {
+    font-size: 2.5rem; /* Larger text */
+    color: #333; /* Dark text color */
+    margin-bottom: 40px; /* Space below subtitle */
+}
+
+/* Container for partitions without boxes */
+.partitions-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between sections */
+    gap: 20px; /* Space between sections */
+    flex-wrap: wrap; /* Ensure sections wrap on smaller screens */
+}
+
+/* Partition styling without boxes */
+.partition {
+    flex: 1; /* Allow sections to grow and fill available space */
+    max-width: 300px; /* Maximum width for each section */
+    text-align: center; /* Center text inside sections */
+}
+
+.partition h4 {
+    font-size: 1.8rem; /* Larger text for headings */
+    margin: 10px 0;
+}
+
+.partition p {
+    color: #666; /* Grey text color */
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Image styling */
+.partition-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .logo {
+        margin-bottom: 10px; /* Add space between logo and nav */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+    
+    .sub-quote {
+        font-size: 1rem; /* Smaller font size */
+    }
+    
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .curvy-button {
+        padding: 10px 20px; /* Adjust padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+    
+    .info-container {
+        flex-direction: column;
+    }
+    
+    .info-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+    
+    .sub-quote {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+    
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .curvy-button {
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+    
+    .info-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space between cards */
+    }
+    
+    .how-it-works-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+    
+    .partition {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+    
+    .partition-image {
+        width: 80px; /* Smaller image size */
+    }
+}
+
+
+
+/* Community Section */
+.community-section {
+    background-color: #4CAF50; /* Same as hero section */
+    color: black;
+    padding: 100px 20px; /* Increased padding for more space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 60px; /* Increased gap for more space between sections */
+}
+
+.join-community, .subscribe-newsletter {
+    flex: 1;
+    max-width: 50%;
+}
+
+.join-community h2, .subscribe-newsletter h2 {
+    font-size: 2.5rem; /* Larger font size for headings */
+    margin-bottom: 15px;
+    font-weight: 600; /* Heavier font weight */
+}
+
+.join-community p {
+    font-size: 1.2rem; /* Larger text for better readability */
+    line-height: 1.8; /* Increased line height for better spacing */
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px; /* Increased gap between input and button */
+    align-items: center;
+}
+
+.newsletter-form input {
+    padding: 15px; /* Increased padding for the input field */
+    border: none;
+    border-radius: 30px; /* More rounded corners */
+    font-size: 1rem; /* Larger font size in input field */
+    width: 80%; /* Full width of the container */
+}
+
+.newsletter-form button {
+    background-color: #ffffff;
+    color: black;
+    padding: 15px 30px; /* Larger button for better visibility */
+    border: none;
+    border-radius: 30px; /* Rounded corners for button */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem; /* Larger font size for button */
+}
+
+.newsletter-form button:hover {
+    background-color: #f0f0f0;
+    color: #4CAF50; /* Matching Green */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2c2c2c; /* Dark gray for high contrast */
+    color: #ffffff; /* White text color for readability */
+    padding: 60px 20px; /* Generous padding */
+    text-align: center; /* Centered text */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Center content horizontally */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 30px; /* Space between sections */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+}
+
+.footer-logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.footer-logo h1 {
+    font-size: 1.5rem; /* Larger font size for the logo text */
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff; /* White text color */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between link groups */
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between links */
+}
+
+.footer-links h3 {
+    font-size: 1.2rem; /* Larger font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+    color: #4CAF50; /* Green color for headings */
+}
+
+.footer-links a {
+    color: #cccccc; /* Light gray text color for links */
+    text-decoration: none;
+    font-size: 1rem; /* Standard font size */
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* White text color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between social icons */
+}
+
+.footer-social a {
+    color: #4CAF50; /* Green icon color */
+    font-size: 1.5rem; /* Larger icon size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-social a:hover {
+    color: #ffffff; /* White color on hover */
+}
+
+.footer-about {
+    font-size: 1rem; /* Standard font size */
+    margin-top: 20px; /* Space above the about section */
+    color: #cccccc; /* Light gray text color */
+}
